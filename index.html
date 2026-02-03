@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Solutions | Business Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="assets/logoimg.webp" alt="Stackly Solutions Logo" />
+                Stackly<span>Solutions</span>
+            </a>
+            
+            <div class="mobile-toggle" id="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Transform Your Business With <span>Innovative Solutions</span></h1>
+                <p>We provide cutting-edge business solutions that drive growth, enhance efficiency, and maximize your ROI. Let us help you navigate the digital landscape with confidence.</p>
+                <div class="hero-btns">
+                    <a href="#services" class="btn btn-primary">Our Services</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- Animated visual element -->
+                <div style="position: relative; width: 100%; height: 400px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);">
+                    <img src="assets/hero.webp" alt="Hero Visual" style="width: 60%; height: 60%; object-fit: cover; display: flex; align-items: center; justify-content: center; position: absolute; top: 20%; left: 20%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                    <!-- Floating elements inside the visual -->
+                    <div class="floating-element" style="position: absolute; top: 20%; right: 15%; width: 40px; height: 40px; background: rgba(255,255,255,0.2); border-radius: 10px;"></div>
+                    <div class="floating-element" style="position: absolute; bottom: 25%; left: 10%; width: 60px; height: 60px; background: rgba(255,255,255,0.15); border-radius: 15px;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our <span>Services</span></h2>
+                <p>We offer a comprehensive suite of business solutions designed to propel your organization forward in the digital age.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-delay="0" data-anim="zoomIn">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Business Analytics</h3>
+                    <p>Transform raw data into actionable insights with our advanced analytics platforms.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="service-card" data-delay="0.1" data-anim="rotateIn">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Secure, scalable cloud infrastructure to support your business growth and agility.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="service-card" data-delay="0.2" data-anim="flipIn">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Integration</h3>
+                    <p>Leverage artificial intelligence to automate processes and enhance decision-making.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div> 
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-delay="0" data-anim="flipIn">
+                    <div class="stat-number" data-count="250">0</div>
+                    <div class="stat-text">Happy Clients</div>
+                </div>
+                
+                <div class="stat-item" data-delay="0.1" data-anim="flipIn">
+                    <div class="stat-number" data-count="500">0</div>
+                    <div class="stat-text">Projects Completed</div>
+                </div>
+                
+                <div class="stat-item" data-delay="0.2" data-anim="flipIn">
+                    <div class="stat-number" data-count="98">0</div>
+                    <div class="stat-text">Satisfaction Rate</div>
+                </div>
+                
+                <div class="stat-item" data-delay="0.3" data-anim="flipIn">
+                    <div class="stat-number" data-count="24">0</div>
+                    <div class="stat-text">Support Hours</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our <span>Clients</span> Say</h2>
+                <p>Real feedback from companies who trusted Stackly Solutions to transform their businesses.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-delay="0.05" data-anim="zoomIn">
+                    <div class="service-icon"><i class="fas fa-quote-left"></i></div>
+                    <h3>"Exceeded Expectations"</h3>
+                    <p>Stackly's analytics platform helped us increase revenue by 32% in 6 months.</p>
+                    <div class="stat-text">— Sarah L., CEO</div>
+                </div>
+                <div class="service-card" data-delay="0.2" data-anim="zoomIn">
+                    <div class="service-icon"><i class="fas fa-quote-left"></i></div>
+                    <h3>"Fast & Reliable"</h3>
+                    <p>Their cloud migration was seamless and our systems are far more stable.</p>
+                    <div class="stat-text">— Michael G., CTO</div>
+                </div>
+                <div class="service-card" data-delay="0.35" data-anim="zoomIn">
+                    <div class="service-icon"><i class="fas fa-quote-left"></i></div>
+                    <h3>"Highly Recommended"</h3>
+                    <p>The AI integrations saved us hundreds of hours of manual work per month.</p>
+                    <div class="stat-text">— Ana P., Head of Ops</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section" id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet the <span>Team</span></h2>
+                <p>A group of passionate experts dedicated to your success.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card team-card" data-delay="0.05" data-anim="flipIn">
+                    <div class="service-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3>Alex Johnson</h3>
+                    <p>Lead Data Scientist</p>
+                </div>
+                <div class="service-card team-card" data-delay="0.15" data-anim="flipIn">
+                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Priya Singh</h3>
+                    <p>Head of Engineering</p>
+                </div>
+                <div class="service-card team-card" data-delay="0.25" data-anim="flipIn">
+                    <div class="service-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Marcus Lee</h3>
+                    <p>Product Strategist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="section" id="resources">
+        <div class="container">
+            <div class="section-title">
+                <h2>Resources & <span>Insights</span></h2>
+                <p>Guides, case studies, and resources to help you stay ahead.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-delay="0.05" data-anim="rotateIn">
+                    <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+                    <h3>Case Study: Retail</h3>
+                    <p>How we helped a retail chain double online sales.</p>
+                    <a href="#" class="btn btn-outline">Read More</a>
+                </div>
+                <div class="service-card" data-delay="0.15" data-anim="rotateIn">
+                    <div class="service-icon"><i class="fas fa-book"></i></div>
+                    <h3>Whitepaper</h3>
+                    <p>Top 10 strategies for data-driven growth.</p>
+                    <a href="#" class="btn btn-outline">Download</a>
+                </div>
+                <div class="service-card" data-delay="0.25" data-anim="rotateIn">
+                    <div class="service-icon"><i class="fas fa-video"></i></div>
+                    <h3>Webinar</h3>
+                    <p>Watch our experts discuss scalable cloud design.</p>
+                    <a href="#" class="btn btn-outline">Watch Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <div class="cta-content" data-anim="zoomIn">
+                <h2>Ready to Transform Your Business?</h2>
+                <p>Contact us today for a free consultation and discover how Stackly Solutions can help your organization reach new heights.</p>
+                <a href="#contact-form" class="btn btn-primary btn-large" style="padding: 15px 40px; font-size: 18px;">Start Your Journey</a>
+            </div> 
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="assets/logoimg.webp" alt="Stackly Solutions Logo" />
+                        Stackly<span>Solutions</span>
+                    </div>
+                    <p>We deliver innovative business solutions that drive growth, enhance efficiency, and maximize ROI for organizations worldwide.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#clients">Case Studies</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Business Ave, Suite 500, New York, NY 10001</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@stacklysolutions.com</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Stackly Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
