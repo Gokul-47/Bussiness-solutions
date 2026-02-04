@@ -3,239 +3,426 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackly Solutions | Business Solutions</title>
+    <title>Stackly | Business Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header & Navigation -->
     <header id="header">
-        <div class="container nav-container">
+        <div class="container header-container">
             <a href="#" class="logo">
-                <img src="assets/logoimg.webp" alt="Stackly Solutions Logo" />
-                Stackly<span>Solutions</span>
+                <i class="fas fa-layer-group"></i>
+                <span>Stackly</span>
             </a>
             
-            <div class="mobile-toggle" id="mobile-toggle">
+            <div class="hamburger" id="hamburger">
                 <i class="fas fa-bars"></i>
             </div>
             
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#clients">Clients</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            
-            
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#about">About</a></li>
+                    
+                    <!-- External link example that will redirect to 404 -->
+                    <li><a href="https://external-site.com" class="external-link">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="floating-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-        </div>
-        
         <div class="container hero-content">
             <div class="hero-text">
-                <h1>Transform Your Business With <span>Innovative Solutions</span></h1>
-                <p>We provide cutting-edge business solutions that drive growth, enhance efficiency, and maximize your ROI. Let us help you navigate the digital landscape with confidence.</p>
+                <h1>Transform Your Business with <span>Stackly Solutions</span></h1>
+                <p>We provide comprehensive business solutions that help companies streamline operations, enhance productivity, and drive growth through innovative technology and strategic consulting.</p>
                 <div class="hero-btns">
-                    <a href="#services" class="btn btn-primary">Our Services</a>
-                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                    <a href="#contact" class="btn">Get Started</a>
+                    <a href="#services" class="btn btn-secondary">Our Services</a>
+                    <a href="#process" class="btn btn-outline">Our Process</a>
                 </div>
             </div>
-            <div class="hero-visual">
-                <!-- Animated visual element -->
-                <div style="position: relative; width: 100%; height: 400px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);">
-                    <img src="assets/hero.webp" alt="Hero Visual" style="width: 60%; height: 60%; object-fit: cover; display: flex; align-items: center; justify-content: center; position: absolute; top: 20%; left: 20%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                    <!-- Floating elements inside the visual -->
-                    <div class="floating-element" style="position: absolute; top: 20%; right: 15%; width: 40px; height: 40px; background: rgba(255,255,255,0.2); border-radius: 10px;"></div>
-                    <div class="floating-element" style="position: absolute; bottom: 25%; left: 10%; width: 60px; height: 60px; background: rgba(255,255,255,0.15); border-radius: 15px;"></div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Business Solutions">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section (New) -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-count="500">0</div>
+                    <div class="stat-text">Happy Clients</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-number" data-count="95">0</div>
+                    <div class="stat-text">Client Retention</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-number" data-count="1200">0</div>
+                    <div class="stat-text">Projects Completed</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-number" data-count="25">0</div>
+                    <div class="stat-text">Industry Awards</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="section" id="services">
+    <section class="services" id="services">
         <div class="container">
-            <div class="section-title">
-                <h2>Our <span>Services</span></h2>
-                <p>We offer a comprehensive suite of business solutions designed to propel your organization forward in the digital age.</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card" data-delay="0" data-anim="zoomIn">
+            <h2 class="section-title">Our Business Solutions</h2>
+            <div class="services-container">
+                <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-chart-bar"></i>
+                        <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>Business Analytics</h3>
-                    <p>Transform raw data into actionable insights with our advanced analytics platforms.</p>
-                    <a href="#" class="btn btn-outline">Learn More</a>
+                    <p>Turn your data into actionable insights with our advanced analytics platforms. Make data-driven decisions that propel your business forward.</p>
+                    <a href="#" class="btn">Learn More</a>
                 </div>
                 
-                <div class="service-card" data-delay="0.1" data-anim="rotateIn">
+                <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-cloud"></i>
+                        <i class="fas fa-cloud-upload-alt"></i>
                     </div>
                     <h3>Cloud Solutions</h3>
-                    <p>Secure, scalable cloud infrastructure to support your business growth and agility.</p>
-                    <a href="#" class="btn btn-outline">Learn More</a>
+                    <p>Migrate to the cloud with our secure and scalable solutions. Enhance collaboration, reduce costs, and improve business agility.</p>
+                    <a href="#" class="btn">Learn More</a>
                 </div>
                 
-                <div class="service-card" data-delay="0.2" data-anim="flipIn">
+                <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-robot"></i>
+                        <i class="fas fa-lock"></i>
                     </div>
-                    <h3>AI Integration</h3>
-                    <p>Leverage artificial intelligence to automate processes and enhance decision-making.</p>
-                    <a href="#" class="btn btn-outline">Learn More</a>
-                </div> 
+                    <h3>Cybersecurity</h3>
+                    <p>Protect your digital assets with our comprehensive security solutions. Stay ahead of threats with proactive monitoring and defense.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item" data-delay="0" data-anim="flipIn">
-                    <div class="stat-number" data-count="250">0</div>
-                    <div class="stat-text">Happy Clients</div>
+    <!-- Process Section (New) -->
+    <section class="process" id="process">
+        <div class="container process-container">
+            <h2 class="section-title">Our Working Process</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Discovery & Analysis</h3>
+                        <p>We begin by understanding your business needs, challenges, and goals through in-depth analysis.</p>
+                    </div>
                 </div>
                 
-                <div class="stat-item" data-delay="0.1" data-anim="flipIn">
-                    <div class="stat-number" data-count="500">0</div>
-                    <div class="stat-text">Projects Completed</div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Strategy & Planning</h3>
+                        <p>We develop a customized strategy with clear milestones and deliverables for your project.</p>
+                    </div>
                 </div>
                 
-                <div class="stat-item" data-delay="0.2" data-anim="flipIn">
-                    <div class="stat-number" data-count="98">0</div>
-                    <div class="stat-text">Satisfaction Rate</div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Implementation</h3>
+                        <p>Our experts execute the plan using cutting-edge technology and industry best practices.</p>
+                    </div>
                 </div>
                 
-                <div class="stat-item" data-delay="0.3" data-anim="flipIn">
-                    <div class="stat-number" data-count="24">0</div>
-                    <div class="stat-text">Support Hours</div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Support & Optimization</h3>
+                        <p>We provide ongoing support and continuously optimize solutions for maximum performance.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="section" id="testimonials">
+    <!-- Testimonials Section (New) -->
+    <section class="testimonials" id="testimonials">
         <div class="container">
-            <div class="section-title">
-                <h2>What Our <span>Clients</span> Say</h2>
-                <p>Real feedback from companies who trusted Stackly Solutions to transform their businesses.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card" data-delay="0.05" data-anim="zoomIn">
-                    <div class="service-icon"><i class="fas fa-quote-left"></i></div>
-                    <h3>"Exceeded Expectations"</h3>
-                    <p>Stackly's analytics platform helped us increase revenue by 32% in 6 months.</p>
-                    <div class="stat-text">— Sarah L., CEO</div>
-                </div>
-                <div class="service-card" data-delay="0.2" data-anim="zoomIn">
-                    <div class="service-icon"><i class="fas fa-quote-left"></i></div>
-                    <h3>"Fast & Reliable"</h3>
-                    <p>Their cloud migration was seamless and our systems are far more stable.</p>
-                    <div class="stat-text">— Michael G., CTO</div>
-                </div>
-                <div class="service-card" data-delay="0.35" data-anim="zoomIn">
-                    <div class="service-icon"><i class="fas fa-quote-left"></i></div>
-                    <h3>"Highly Recommended"</h3>
-                    <p>The AI integrations saved us hundreds of hours of manual work per month.</p>
-                    <div class="stat-text">— Ana P., Head of Ops</div>
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-slider">
+                    <div class="testimonial-track" id="testimonialTrack">
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-text">
+                                    "Stackly transformed our business operations completely. Their cloud solutions helped us reduce costs by 40% while improving productivity. The team was professional, knowledgeable, and delivered beyond our expectations."
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Sarah Johnson">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Sarah Johnson</h4>
+                                        <p>CEO, TechFlow Inc.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-text">
+                                    "The cybersecurity solution implemented by Stackly has given us peace of mind. Their team identified vulnerabilities we didn't even know existed and provided a robust security framework. Highly recommended!"
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Michael Chen">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Michael Chen</h4>
+                                        <p>CTO, SecureBank Ltd.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-text">
+                                    "Working with Stackly was a game-changer for our analytics department. Their business intelligence tools provided insights that helped us increase revenue by 28% in just 6 months. Exceptional service!"
+                                </div>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Jessica Williams">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Jessica Williams</h4>
+                                        <p>Director, Growth Analytics Co.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slider-controls">
+                        <button class="slider-btn prev-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-btn next-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section class="section" id="team">
+    <!-- Team Section (New) -->
+    <section class="team" id="team">
         <div class="container">
-            <div class="section-title">
-                <h2>Meet the <span>Team</span></h2>
-                <p>A group of passionate experts dedicated to your success.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card team-card" data-delay="0.05" data-anim="flipIn">
-                    <div class="service-icon"><i class="fas fa-user-tie"></i></div>
-                    <h3>Alex Johnson</h3>
-                    <p>Lead Data Scientist</p>
+            <h2 class="section-title">Meet Our Expert Team</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Alex Morgan">
+                    </div>
+                    <div class="member-info">
+                        <h3>Alex Morgan</h3>
+                        <p>Chief Technology Officer</p>
+                        <p>10+ years in cloud architecture and digital transformation</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card team-card" data-delay="0.15" data-anim="flipIn">
-                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-                    <h3>Priya Singh</h3>
-                    <p>Head of Engineering</p>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Sophia Williams">
+                    </div>
+                    <div class="member-info">
+                        <h3>Sophia Williams</h3>
+                        <p>Head of Cybersecurity</p>
+                        <p>Expert in network security and threat intelligence</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card team-card" data-delay="0.25" data-anim="flipIn">
-                    <div class="service-icon"><i class="fas fa-bullseye"></i></div>
-                    <h3>Marcus Lee</h3>
-                    <p>Product Strategist</p>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="David Chen">
+                    </div>
+                    <div class="member-info">
+                        <h3>David Chen</h3>
+                        <p>Lead Business Analyst</p>
+                        <p>Specializes in data analytics and business intelligence</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Resources Section -->
-    <section class="section" id="resources">
-        <div class="container">
-            <div class="section-title">
-                <h2>Resources & <span>Insights</span></h2>
-                <p>Guides, case studies, and resources to help you stay ahead.</p>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about-content">
+            <div class="about-text">
+                <h2 class="section-title">Why Choose Stackly?</h2>
+                <p>At Stackly, we combine industry expertise with cutting-edge technology to deliver business solutions that drive real results. Our team of experts works closely with you to understand your unique challenges and develop tailored strategies for success.</p>
+                <p>We've helped over 500 companies streamline operations, increase efficiency, and achieve sustainable growth. Our commitment to excellence and customer satisfaction sets us apart in the competitive business solutions landscape.</p>
+                
+                <div class="about-features">
+                    <div class="about-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div>
+                            <h3>Proven Track Record</h3>
+                            <p>Over 95% client retention rate and 500+ successful projects.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div>
+                            <h3>Rapid Implementation</h3>
+                            <p>Deploy solutions 40% faster than industry average.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div>
+                            <h3>24/7 Support</h3>
+                            <p>Round-the-clock technical support and maintenance.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="services-grid">
-                <div class="service-card" data-delay="0.05" data-anim="rotateIn">
-                    <div class="service-icon"><i class="fas fa-file-alt"></i></div>
-                    <h3>Case Study: Retail</h3>
-                    <p>How we helped a retail chain double online sales.</p>
-                    <a href="#" class="btn btn-outline">Read More</a>
-                </div>
-                <div class="service-card" data-delay="0.15" data-anim="rotateIn">
-                    <div class="service-icon"><i class="fas fa-book"></i></div>
-                    <h3>Whitepaper</h3>
-                    <p>Top 10 strategies for data-driven growth.</p>
-                    <a href="#" class="btn btn-outline">Download</a>
-                </div>
-                <div class="service-card" data-delay="0.25" data-anim="rotateIn">
-                    <div class="service-icon"><i class="fas fa-video"></i></div>
-                    <h3>Webinar</h3>
-                    <p>Watch our experts discuss scalable cloud design.</p>
-                    <a href="#" class="btn btn-outline">Watch Now</a>
-                </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Team Collaboration">
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta" id="contact">
+    <!-- CTA Section (New) -->
+    <section class="cta" id="cta">
+        <div class="container cta-container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Join hundreds of successful companies that have scaled their operations with Stackly solutions. Get started with a free consultation today.</p>
+            <a href="#contact" class="btn">Start Your Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
         <div class="container">
-            <div class="cta-content" data-anim="zoomIn">
-                <h2>Ready to Transform Your Business?</h2>
-                <p>Contact us today for a free consultation and discover how Stackly Solutions can help your organization reach new heights.</p>
-                <a href="#contact-form" class="btn btn-primary btn-large" style="padding: 15px 40px; font-size: 18px;">Start Your Journey</a>
-            </div> 
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's Transform Your Business Together</h3>
+                    <p>Ready to take your business to the next level? Contact us today to schedule a consultation with our experts. We'll help you identify opportunities for improvement and develop a customized solution for your needs.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Our Office</h4>
+                                <p>123 Business Street, Suite 500<br>New York, NY 10001</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Phone Number</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Address</h4>
+                                <p>info@stacklysolutions.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="John Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" class="form-control" placeholder="Your Company">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" rows="5" placeholder="Tell us about your business needs..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-container">
                 <div class="footer-about">
-                    <div class="footer-logo">
-                        <img src="assets/logoimg.webp" alt="Stackly Solutions Logo" />
-                        Stackly<span>Solutions</span>
-                    </div>
-                    <p>We deliver innovative business solutions that drive growth, enhance efficiency, and maximize ROI for organizations worldwide.</p>
+                    <a href="#" class="footer-logo">
+                        <i class="fas fa-layer-group"></i>
+                        <span>Stackly</span>
+                    </a>
+                    <p>Providing innovative business solutions that drive growth, efficiency, and success for companies of all sizes.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -245,29 +432,50 @@
                 </div>
                 
                 <div class="footer-links">
-                    <h3>Quick Links</h3>
+                    <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#services">Services</a></li>
+                        <li><a href="#process">Our Process</a></li>
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#clients">Case Studies</a></li>
-                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-contact">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Business Ave, Suite 500, New York, NY 10001</p>
-                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                    <p><i class="fas fa-envelope"></i> info@stacklysolutions.com</p>
+                <div class="footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#services">Business Analytics</a></li>
+                        <li><a href="#services">Cloud Solutions</a></li>
+                        <li><a href="#services">Cybersecurity</a></li>
+                        <li><a href="#services">Digital Transformation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Business Street, NY</li>
+                        <li><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@stacklysolutions.com</li>
+                    </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Stackly Solutions. All rights reserved.</p>
+                <p>&copy; 2023 Stackly Business Solutions. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- 404 Page (hidden by default) -->
+    <div id="page404" class="page-404" style="display: none;">
+        <div class="error-container">
+            <div class="error-code">404</div>
+            <div class="error-message">Page Not Found</div>
+            <p class="error-description">The page you're looking for doesn't exist or has been moved. This could be because you clicked on an external link that we cannot redirect to for security reasons.</p>
+            <a href="#" class="btn" id="backHome">Back to Homepage</a>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
