@@ -172,6 +172,16 @@
             position: relative;
         }
 
+        /* Constrain logo bitmap/svg so very large source images can't overflow the header or footer */
+        .logo img, .footer-logo img {
+            height: 48px;           /* ideal visual height on desktop */
+            max-height: 56px;      /* hard cap */
+            width: auto;
+            max-width: 160px;      /* prevents overly wide logos */
+            object-fit: contain;
+            display: inline-block;
+        }
+
         .logo i {
             font-size: 2.2rem;
             color: var(--secondary);
@@ -181,6 +191,27 @@
 
         .logo:hover i {
             transform: rotate(0deg);
+        }
+
+        /* Reduce logo on small screens and hide text label when space is tight */
+        @media (max-width: 480px) {
+            .logo img, .footer-logo img {
+                height: 36px;
+                max-width: 120px;
+            }
+
+            .logo {
+                font-size: 1.4rem;
+                gap: 8px;
+            }
+
+            .logo span {
+                display: none;
+            }
+
+            .header-container {
+                padding: 12px;
+            }
         }
 
         .nav-links {
