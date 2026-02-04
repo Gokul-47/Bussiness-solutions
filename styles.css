@@ -196,8 +196,8 @@
         /* Reduce logo on small screens and hide text label when space is tight */
         @media (max-width: 480px) {
             .logo img, .footer-logo img {
-                height: 36px;
-                max-width: 120px;
+                height: 32px;
+                max-width: 110px;
             }
 
             .logo {
@@ -211,6 +211,15 @@
 
             .header-container {
                 padding: 12px;
+            }
+
+            /* Allow footer content to stack more compactly */
+            .footer-container {
+                gap: 20px;
+            }
+
+            .footer-about p {
+                font-size: 0.95rem;
             }
         }
 
@@ -1106,6 +1115,17 @@
             align-items: center;
             gap: 12px;
             transition: var(--transition);
+        }
+
+        /* Stronger footer-logo image caps to prevent overflow on narrow layouts */
+        .footer-logo img {
+            max-height: 48px;    /* hard cap */
+            height: auto;        /* prefer intrinsic ratio */
+            max-width: 140px;
+            width: auto;
+            object-fit: contain;
+            display: inline-block;
+            flex-shrink: 0;      /* avoid the image stretching the layout */
         }
 
         .footer-logo:hover {
