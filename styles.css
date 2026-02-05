@@ -224,8 +224,14 @@
                 gap: 8px;
             }
 
+            /* Keep brand text visible on small screens but reduce and truncate to avoid overflow */
             .logo span {
-                display: none;
+                display: inline-block;
+                font-size: 1rem;
+                max-width: 120px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
 
             .header-container {
@@ -273,10 +279,19 @@
             cursor: pointer;
             color: white;
             transition: var(--transition);
+            background: transparent;
+            border: none;
+            padding: 0;
         }
 
         .hamburger:hover {
             color: var(--accent);
+        }
+
+        .hamburger:focus {
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+            border-radius: 6px;
         }
 
         /* Hero Section */

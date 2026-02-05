@@ -19,9 +19,9 @@
                 <span>Stackly</span>
             </a>
             
-            <div class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
+            <button class="hamburger" id="hamburger" aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
             
             <nav>
                 <ul class="nav-links" id="navLinks">
@@ -456,9 +456,48 @@
     <script src="script.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
+      // Mobile nav toggle + accessibility
+      const hamburger = document.getElementById('hamburger');
+      const nav = document.getElementById('navLinks');
+
+      function closeNav() {
+        nav.classList.remove('active');
+        const icon = hamburger.querySelector('i');
+        if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+
+      function openNav() {
+        nav.classList.add('active');
+        const icon = hamburger.querySelector('i');
+        if (icon) { icon.classList.remove('fa-bars'); icon.classList.add('fa-times'); }
+        hamburger.setAttribute('aria-expanded', 'true');
+      }
+
+      hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (nav.classList.contains('active')) { closeNav(); } else { openNav(); }
+      });
+
+      // Close nav when a nav link is clicked (keeps redirect behavior)
+      document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', function() {
+        if (nav.classList.contains('active')) closeNav();
+      }));
+
+      // Close on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && nav.classList.contains('active')) closeNav();
+      });
+
+      // Click outside to close
+      document.addEventListener('click', function(e) {
+        if (!nav.contains(e.target) && !hamburger.contains(e.target) && nav.classList.contains('active')) closeNav();
+      });
+
       // Redirect nav links and external links to the site's 404 page
       function redirectTo404(e) {
         e.preventDefault();
+        closeNav();
         window.location.href = '404.html';
       }
       document.querySelectorAll('.nav-links a, a.external-link').forEach(a => a.addEventListener('click', redirectTo404));
