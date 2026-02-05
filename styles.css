@@ -160,6 +160,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
+            position: relative;
         }
 
         .logo {
@@ -259,10 +260,7 @@
             transition: var(--transition);
         }
 
-        .hamburger:hover {
-            color: var(--primary);
-            transform: scale(1.1);
-        }
+        
 
         /* Hero Section */
         .hero {
@@ -1445,6 +1443,11 @@
             
             .hamburger {
                 display: block;
+                position: absolute;
+                right: 18px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1001;
             }
             
             .hero {
