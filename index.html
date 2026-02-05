@@ -453,16 +453,16 @@
         </div>
     </footer>
 
-    <!-- 404 Page (hidden by default) -->
-    <div id="page404" class="page-404" style="display: none;">
-        <div class="error-container">
-            <div class="error-code">404</div>
-            <div class="error-message">Page Not Found</div>
-            <p class="error-description">The page you're looking for doesn't exist or has been moved. This could be because you clicked on an external link that we cannot redirect to for security reasons.</p>
-            <a href="#" class="btn" id="backHome">Back to Homepage</a>
-        </div>
-    </div>
-
     <script src="script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Redirect nav links and external links to the site's 404 page
+      function redirectTo404(e) {
+        e.preventDefault();
+        window.location.href = '404.html';
+      }
+      document.querySelectorAll('.nav-links a, a.external-link').forEach(a => a.addEventListener('click', redirectTo404));
+    });
+    </script>
 </body>
 </html>
