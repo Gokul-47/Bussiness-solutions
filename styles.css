@@ -28,6 +28,7 @@
 
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
 
         body {
@@ -1565,6 +1566,12 @@
             
             .hero-text h1 {
                 font-size: 2.5rem;
+            }
+
+            /* Prevent 3D transforms from creating horizontal overflow on small screens */
+            .hero-image img {
+                transform: none;
+                border: 0;
             }
             
             .section-title {
